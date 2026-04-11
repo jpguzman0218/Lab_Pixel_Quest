@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-Color red = new Color(1f, 0f, 0f);
-Color green = new Color(0f, 1f, 0f);
-Color blue = new Color(0f, 0f, 1f);
+
 
 public class GeoController : MonoBehaviour
 {
+    Color red = new Color(1f, 0f, 0f);
+    Color green = new Color(0f, 1f, 0f);
+    Color blue = new Color(0f, 0f, 1f);
+
     private Rigidbody2D rb;
     public int speed = 5;
     public string nextLevel = "Secen2";
@@ -40,7 +42,7 @@ public class GeoController : MonoBehaviour
         {
             case "Death":
                 {
-                    string thislevel= SceneManager.GetActiveScene().name;
+                    string thislevel = SceneManager.GetActiveScene().name;
                     SceneManager.LoadScene(thislevel);
                     break;
                 }
@@ -49,8 +51,10 @@ public class GeoController : MonoBehaviour
                 {
                     SceneManager.LoadScene(nextLevel);
                     break;
-
-                   public class ColorSwitcher : MonoBehaviour
+                }
+        }
+    }
+    public class ColorSwitcher : MonoBehaviour
     {
         Renderer rend;
 
