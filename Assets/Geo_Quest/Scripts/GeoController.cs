@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
+
 public class GeoController : MonoBehaviour
 {
     Color red = new Color(1f, 0f, 0f);
@@ -51,6 +52,11 @@ public class GeoController : MonoBehaviour
                 {
                     SceneManager.LoadScene(nextLevel);
                     break;
+                }
+            case "Coin":
+                {  
+                    Destroy(collision.gameObject);
+                    break; 
                 }
         }
     }
